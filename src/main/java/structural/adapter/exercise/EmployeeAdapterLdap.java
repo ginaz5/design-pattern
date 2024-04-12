@@ -9,21 +9,32 @@ public class EmployeeAdapterLdap implements Employee {
 
     @Override
     public String getId() {
-        return employeeFromLDAP.getCn();
+        return employeeFromLDAP.cn();
     }
 
     @Override
     public String getFirstName() {
-        return employeeFromLDAP.getGivenName();
+        return employeeFromLDAP.givenName();
     }
 
     @Override
     public String getLastName() {
-        return employeeFromLDAP.getSurname();
+        return employeeFromLDAP.surname();
     }
 
     @Override
     public String getEmail() {
-        return employeeFromLDAP.getMail();
+        return employeeFromLDAP.mail();
+    }
+
+    // adding toString method might make it similar to decorator method
+    @Override
+    public String toString() {
+        return "EmployeeLdap{" +
+                "cn='" + employeeFromLDAP.cn() + '\'' +
+                ", surname='" + employeeFromLDAP.surname() + '\'' +
+                ", givenName='" + employeeFromLDAP.givenName() + '\'' +
+                ", mail='" + employeeFromLDAP.mail() + '\'' +
+                '}';
     }
 }
