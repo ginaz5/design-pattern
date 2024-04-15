@@ -1,4 +1,4 @@
-package creational.singleton;
+package creational.singleton.exercise;
 
 import java.sql.Connection;
 import java.sql.SQLException;
