@@ -13,4 +13,21 @@ Examples:
 - Runtime
 - Logger
 - Spring beans by default
-- Graphic Managers
+- Graphic 
+
+# Builder Pattern
+Consider a builder when faced with many constructor parameters
+- Immutability, force it to be immutable object once the construction is done
+- typically static inner class
+- call appropriate constructor
+- code readability
+
+Examples:
+- StringBuilder
+- DocumentBuilder
+- Locale.Builder
+
+Other examples:
+https://www.blogbrb.com/posts/book/effective-java-item2/
+
+![](/Users/ginalin/Dev/IDEA/design-pattern/src/main/java/creational/builder/Contrast of builder and prototype.png)
