@@ -10,11 +10,30 @@ https://app.pluralsight.com/library/courses/java-se-17-creational-design-pattern
 - private constructor
 - No parameters required for construction
 
-Examples:
+Examples in JAVA API:
 - Runtime
 - Logger
 - Spring beans by default
 - Graphic 
+
+## Factory method
+- encapsulate instantiation logic
+- responsible for lifecycle
+
+
+Examples in JAVA API:
+- Calendar, specific factory, static factory
+- ResourceBundle
+- NumberFormat
+
+How to use
+- common interface
+- concrete classes
+- parameterized created method
+  parameters to determine which object to be created
+
+
+
 
 ## Builder
 Consider a builder when faced with many constructor parameters
@@ -23,7 +42,7 @@ Consider a builder when faced with many constructor parameters
 - call appropriate constructor
 - code readability
 
-Examples:
+Examples in JAVA API:
 - StringBuilder
 - DocumentBuilder
 - Locale.Builder
@@ -34,7 +53,7 @@ https://www.blogbrb.com/posts/book/effective-java-item2/
 ![](/Users/ginalin/Dev/IDEA/design-pattern/src/main/java/creational/builder/Contrast of builder and prototype.png)
 
 ## Prototype 
-- avoid costly creation
+- avoid costly creation -> can help with performance
 - typically doesn't use "new", because it's cloned
 - copy, but each instance is unique, different memory address
 - usually implemented with a registry
@@ -42,5 +61,5 @@ https://www.blogbrb.com/posts/book/effective-java-item2/
 - deep copy require custom implementation when implementing cloneable as default is shallow copy
 - CloneNotSupportedException. The exception would be thrown if you attempted to clone an object of a class that does not implement Cloneable and has not overridden the clone() method to handle cloning differently.
 
-Example:
+Examples in JAVA API:
 - java.lang.Object#clone()
