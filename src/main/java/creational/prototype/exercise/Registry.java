@@ -5,17 +5,17 @@ import java.util.Map;
 
 public class Registry {
 
-	private Map<String, Item> items = new HashMap<String, Item>();
+	private Map<ItemType, Item> items = new HashMap<>();
 	
 	public Registry() {
 		loadItems();
 	}
 	
-	public Item createItem (String type) {
+	public Item createItem (ItemType itemType) {
 		Item item = null;
 
 		try {
-			item = (Item) (items.get(type)).clone();
+			item = (Item) (items.get(itemType)).clone();
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
@@ -28,12 +28,12 @@ public class Registry {
 		movie.setTitle("Basic Movie");
 		movie.setPrice(24.99);
 		movie.setRuntime("2 hours");
-		items.put("Movie", movie);
+		items.put(ItemType.MOVIE, movie);
 		
 		Book book = new Book();
 		book.setNumberOfPages(335);
 		book.setPrice(19.99);
 		book.setTitle("Basic Book");
-		items.put("Book", book);
+		items.put(ItemType.BOOK, book);
 	}
 }
