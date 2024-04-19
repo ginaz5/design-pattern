@@ -16,6 +16,8 @@ Examples in JAVA API:
 - Spring beans by default
 - Graphic 
 
+
+
 ## Factory method
 - encapsulate instantiation logic
 - responsible for lifecycle
@@ -34,10 +36,22 @@ How to use
 
 
 
+## AbstractFactory
+- factory of factories, groups factories together
+- responsible for lifecycle
+- composition
+
+Examples in JAVA API:
+- Frameworks
+- DocumentBuilder
+  - DocumentBuilderFactory is abstract factory
+  - DocumentBuilder is factory
+  - Document class is concrete class created from Document factory, actually an interface, and its implementation is chosen by factory 
+
 
 ## Builder
 Consider a builder when faced with many constructor parameters
-- Immutability, force it to be immutable object once the construction is done
+- immutability, force it to be immutable object once the construction is done
 - typically static inner class
 - call appropriate constructor
 - code readability
@@ -51,6 +65,8 @@ Other examples:
 https://www.blogbrb.com/posts/book/effective-java-item2/
 
 ![](/Users/ginalin/Dev/IDEA/design-pattern/src/main/java/creational/builder/Contrast of builder and prototype.png)
+
+
 
 ## Prototype 
 - avoid costly creation -> can help with performance
