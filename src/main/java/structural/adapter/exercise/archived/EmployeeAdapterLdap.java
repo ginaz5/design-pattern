@@ -1,4 +1,7 @@
-package structural.adapter.exercise;
+package structural.adapter.exercise.archived;
+
+import structural.adapter.exercise.Employee;
+import structural.adapter.exercise.archived.EmployeeLdap;
 
 public class EmployeeAdapterLdap implements Employee {
 

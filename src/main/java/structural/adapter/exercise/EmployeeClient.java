@@ -13,12 +13,12 @@ public class EmployeeClient {
 
         employees.add(employeeFromDB);
 
+        // Now we deal with data from LDAP, and the code below is not working
 //        Employee employeeFromLDAP = new EmployeeLdap("666", "Solo", "Smith", "ldap@<EMAIL>");
-        EmployeeLdap employeeFromLDAP = new EmployeeLdap("666", "Solo", "Smith", "ldap@<EMAIL>");
-        employees.add(new EmployeeAdapterLdap(employeeFromLDAP));
 
-        EmployeeCSV employeeCSV = new EmployeeCSV("234,testCSV,Apple,testCSV@<EMAIL>");
 
+        // csv adapter
+        EmployeeCSV employeeCSV = new EmployeeCSV("3,testCSV,Apple,test_CSV@<EMAIL>");
         employees.add(new EmployeeAdapterCSV(employeeCSV));
 
         return employees;
